@@ -1,0 +1,21 @@
+name: Setup jank - The native Clojure dialect hosted on LLVM with seamless C++ interop.
+description: Setup your github runner with some jank
+author: djblue
+
+runs:
+  using: composite
+  steps:
+    - name: Setup jank on Linux
+      if: runner.os == 'Linux'
+      run: |
+        sudo "$GITHUB_ACTION_PATH"/linux.sh
+      shell: sh
+    - name: Setup jank on macOS
+      if: runner.os == 'macOS'
+      run: |
+        "$GITHUB_ACTION_PATH"/macos.sh
+      shell: sh
+
+branding:
+  icon: 'bold'
+  color: 'green'
