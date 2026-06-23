@@ -1,5 +1,5 @@
 name: Setup jank - The native Clojure dialect hosted on LLVM with seamless C++ interop.
-description: Setup your github runner with some jank
+description: Set up your Github actions runner with jank.
 author: djblue
 
 runs:
