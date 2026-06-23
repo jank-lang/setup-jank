@@ -1,9 +1,9 @@
 # setup-jank
 
-This action sets up [jank](https://jank-lang.org/) for use in GitHub Actions.
+This action sets up [jank](https://jank-lang.org/) for use in Github Actions.
 
 > [!WARNING] 
-> Since jank is still in Alpha, this will always download the latest binary
+> Since jank is still in alpha, this will always download the latest binary
 > built from main.
 
 
@@ -11,6 +11,8 @@ This action sets up [jank](https://jank-lang.org/) for use in GitHub Actions.
 
 ```yaml
 - name: Setup jank
+  # Feel free to use a commit hash here, instead of main, if you prefer to
+  # manually review updates.
   uses: jank-lang/setup-jank@main
 ```
 
