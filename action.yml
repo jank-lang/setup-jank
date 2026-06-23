@@ -15,6 +15,13 @@ runs:
       run: |
         "$GITHUB_ACTION_PATH"/macos.sh
       shell: sh
+    - name: Setup jank on Windows
+      if: runner.os == 'Windows'
+      run: |
+        Write-Error "Sorry, setup-jank is not currently available on windows."
+        Exit 1
+      shell: pwsh
+
 
 branding:
   icon: 'bold'
